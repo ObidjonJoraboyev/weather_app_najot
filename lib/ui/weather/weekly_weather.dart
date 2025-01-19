@@ -105,6 +105,8 @@ class _WeeklyWeatherScreenState extends State<WeeklyWeatherScreen> {
                             .getWeeklyWeather(context, widget.searchedString);
                       },
                       child: ListView(
+                        physics: BouncingScrollPhysics(
+                            parent: AlwaysScrollableScrollPhysics()),
                         padding: EdgeInsets.zero,
                         children: [
                           TomorrowWidget(

@@ -133,6 +133,8 @@ class _CurrentWeatherScreenState extends State<CurrentWeatherScreen> {
                         context.read<WeatherCubit>().getTodayWeather(context);
                       },
                       child: ListView(
+                        physics: BouncingScrollPhysics(
+                            parent: AlwaysScrollableScrollPhysics()),
                         padding: EdgeInsets.zero,
                         children: [
                           Padding(
@@ -318,7 +320,8 @@ class _CurrentWeatherScreenState extends State<CurrentWeatherScreen> {
                                 13.getW(),
                               ],
                             ),
-                          )
+                          ),
+                          18.getH()
                         ],
                       ),
                     ),
